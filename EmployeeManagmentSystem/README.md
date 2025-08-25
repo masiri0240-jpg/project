@@ -1,5 +1,4 @@
 # Employee Management System
-
 ## Introduction
 The Employee Management System (EMS) is a Java-based application designed to demonstrate advanced object-oriented programming (OOP) principles, including inheritance, polymorphism, dynamic binding, interfaces, and abstract classes.  
 It manages employee records, handles leave requests, and demonstrates real-world organizational workflows with role-based responsibilities.  
