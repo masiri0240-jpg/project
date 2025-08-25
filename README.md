@@ -102,10 +102,9 @@ The main components based on the UML:
 | + findEmployeeById(int id)           |
 | + printEmployeeLeaveRecords(int id)  |
 +--------------------------------------+
+```
 
-
-
-```## Installation
+## Installation
 1. Clone or download the project repository.
 2. Ensure you have Java 8+ installed.
 3. Place the provided `Input.txt` file in the project root (for testing).
