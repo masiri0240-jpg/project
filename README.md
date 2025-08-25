@@ -49,8 +49,60 @@ The main components based on the UML:
 - **Approver (interface):** Defines approval behavior.
 - **Leave:** Stores leave details.
 - **EmployeeManagementSystem:** Central controller.
+```
+              +---------------------+
+              |     Employee        |  (abstract)
+              +---------------------+
+              | - id : int          |
+              | - name : String     |
+              | - salary : double   |
+              +---------------------+
+              | + calculateBonus()  |
+              | + getters/setters   |
+              +---------------------+
+                       ^
+          +------------+-------------+
+          |            |             |
++----------------+  +----------------+  +----------------+
+|    Manager     |  |   Developer    |  |   Designer     |
++----------------+  +----------------+  +----------------+
+| + approveLeave()|  | + calculateBonus()| | + calculateBonus()|
+| + markWorking() |  | (12% salary)    | | (10% salary)     |
+| (15% salary)    |  |                 | |                  |
++-----------------+  +-----------------+ +-----------------+
+          |
+          | implements
+          v
+     +-----------------+
+     |    Approver     | (interface)
+     +-----------------+
+     | + approveLeave()|
+     | + markWorking() |
+     +-----------------+
 
-## Installation
++------------------------------+
+|            Leave             |
++------------------------------+
+| - employee : Employee        |
+| - startDate : LocalDate      |
+| - duration : int             |
++------------------------------+
+
++--------------------------------------+
+|   EmployeeManagementSystem           |
++--------------------------------------+
+| - employees : ArrayList<Employee>    |
+| - leaves : List<Leave>               |
++--------------------------------------+
+| + addEmployee(Employee)              |
+| + removeEmployee(int id)             |
+| + printAllEmployees()                |
+| + approveLeave(...)                  |
+| + markEmployeeAsWorking(...)         |
+| + findEmployeeById(int id)           |
+| + printEmployeeLeaveRecords(int id)  |
++--------------------------------------+
+```## Installation
 1. Clone or download the project repository.
 2. Ensure you have Java 8+ installed.
 3. Place the provided `Input.txt` file in the project root (for testing).
