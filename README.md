@@ -6,7 +6,7 @@
   <img alt="Last Commit" src="https://img.shields.io/github/last-commit/masiri0240-jpg/project">
 </p>
 
-# 📂 Multi-Project Repository
+# 📂 CPCS203 Project Repository
 
 Welcome! 🎉  
 This repository contains **two independent Java projects** developed as coursework at **King Abdulaziz University, Faculty of Computing & Information Technology (FCIT)**.
